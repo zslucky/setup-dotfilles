@@ -6,6 +6,7 @@ brew cask install java8
 brew cask install dropbox
 
 # my tools
+brew cask install docker
 brew cask install shadowsocksx-ng
 brew cask install iterm2
 brew cask install sublime-text
