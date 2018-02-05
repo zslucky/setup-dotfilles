@@ -1,5 +1,6 @@
-## Install cask
-brew install caskroom/cask/brew-cask
+# javas
+# brew cask install java6
+brew cask install java8
 
 # common
 brew cask install dropbox
@@ -8,8 +9,8 @@ brew cask install dropbox
 brew cask install shadowsocksx-ng
 brew cask install iterm2
 brew cask install sublime-text
-brew cask install visual-studio-code
-brew cask install intellij-idea
+# brew cask install visual-studio-code
+# brew cask install intellij-idea
 
 # browsers
 brew cask install google-chrome
