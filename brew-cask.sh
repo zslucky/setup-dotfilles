@@ -1,3 +1,6 @@
+# tap caskroom versions
+brew tap caskroom/versions
+
 # javas
 # brew cask install java6
 brew cask install java8
