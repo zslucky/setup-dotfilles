@@ -10,6 +10,7 @@ brew cask install shadowsocksx-ng
 brew cask install iterm2
 brew cask install sublime-text
 brew cask install postman
+brew cask install charles
 # brew cask install visual-studio-code
 # brew cask install intellij-idea
 
