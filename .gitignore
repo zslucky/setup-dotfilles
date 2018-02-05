@@ -1,0 +1,16 @@
+# git credential file
+.gitconfig.local
+
+# no thx
+node_modules
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Compiled Python files
+*.pyc

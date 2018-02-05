@@ -1,0 +1,23 @@
+## Install cask
+brew install caskroom/cask/brew-cask
+
+# common
+brew cask install dropbox
+
+# my tools
+brew cask install shadowsocksx-ng
+brew cask install iterm2
+brew cask install sublime-text
+brew cask install visual-studio-code
+brew cask install intellij-idea
+
+# browsers
+brew cask install google-chrome
+brew cask install firefox
+
+# tools
+brew cask install cleanmymac
+brew cask install alfred
+
+# media
+# brew cask install vlc
