@@ -63,7 +63,11 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# get custom config
 source ./.extra
+
+source /usr/local/etc/profile.d/z.sh
 
 # User configuration
 
