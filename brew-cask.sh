@@ -7,6 +7,8 @@ brew cask install java8
 
 # common
 brew cask install dropbox
+brew cask install the-unarchiver
+brew cask install vanilla
 
 # my tools
 brew cask install docker
