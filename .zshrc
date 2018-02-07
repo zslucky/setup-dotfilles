@@ -64,6 +64,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Get aliases source
+source ./.aliases
 # Get custom source
 source ./.extra
 # Get function source
