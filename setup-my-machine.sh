@@ -69,6 +69,9 @@ sh ./brew.sh
 ############################################################################################################
 ### init for libs
 
+# setup nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+
 # setup git info
 git config --global user.name "zsney"
 git config --global user.email "zsney.lzhou@gmail.com"

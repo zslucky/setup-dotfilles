@@ -1,13 +1,10 @@
-# Force remove the exists file
-rm -f ~/.extra
-rm -f ~/.zshrc
-rm -f ~/.vimrc
-rm -f ~/.gitignore
-rm -f ~/.gitconfig
+# Link .vim to home
+ln -fs $PWD/.vim $HOME
 
 # Create Link
-ln ./.extra ~/.extra
-ln ./.vimrc ~/.vimrc
-ln ./.zshrc ~/.zshrc
-ln ./.gitignore ~/.gitignore
-ln ./.gitconfig ~/.gitconfig
+ln -fs $PWD/.zshrc $HOME/.zshrc
+ln -fs $PWD/.vimrc $HOME/.vimrc
+ln -fs $PWD/.extra $HOME/.extra
+ln -fs $PWD/.functions $HOME/.functions
+ln -fs $PWD/.gitignore $HOME/.gitignore
+ln -fs $PWD/.gitconfig $HOME/.gitconfig

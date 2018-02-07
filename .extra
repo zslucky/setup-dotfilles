@@ -1,14 +1,2 @@
-# Setup kaggle python docker image quick command
-
-kpython(){
-  docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it kaggle/python python "$@"
-}
-
-ikpython() {
-  docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it kaggle/python ipython
-}
-
-kjupyter() {
-  docker run -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it kaggle/python jupyter notebook --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working
-}
-
+# JAVA_HOME
+# ...
