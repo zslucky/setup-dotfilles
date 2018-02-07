@@ -35,6 +35,8 @@ if ! xcode-select --print-path &> /dev/null; then
     print_result $? 'Agree with the XCode Command Line Tools licence'
 
 fi
+
+echo "------------------> xcode command line tool finished"
 ###
 ##############################################################################################################
 
@@ -48,10 +50,12 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install zsh
 
 # Set zsh as default shell
-chsh -s $(which zsh)
+# chsh -s $(which zsh)
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "------------------> Init install finished"
 
 ###
 ############################################################################################################
@@ -61,6 +65,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ### Install brew libs
 
 sh ./brew.sh
+
+echo "------------------> brew libs install finished"
 
 ###
 ############################################################################################################
@@ -72,9 +78,13 @@ sh ./brew.sh
 # setup nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
+echo "------------------> nvm install finished"
+
 # setup git info
 git config --global user.name "zsney"
 git config --global user.email "zsney.lzhou@gmail.com"
+
+echo "------------------> lib config finished"
 
 ###
 ############################################################################################################
@@ -85,6 +95,8 @@ git config --global user.email "zsney.lzhou@gmail.com"
 # add settings for macos
 sh ./.osx
 
+echo "------------------> osx settings finished"
+
 ###
 ############################################################################################################
 
@@ -94,11 +106,15 @@ sh ./.osx
 # Link the dotfiles to $HOME/
 sh ./symlink-setup.sh
 
+echo "------------------> symlink setup finished"
+
 ###
 ############################################################################################################
 
 ############################################################################################################
 ### Finally install the apps
+
+echo "------------------> start to install apps"
 
 sh ./brew-cask.sh
 
