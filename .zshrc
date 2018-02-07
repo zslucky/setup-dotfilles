@@ -70,8 +70,11 @@ source ./.aliases
 source ./.extra
 # Get function source
 source ./.functions
+
 # Get z function
 source /usr/local/etc/profile.d/z.sh
+# Get sdk function
+source $HOME/.sdkman/bin/sdkman-init.sh
 
 # User configuration
 
