@@ -2,7 +2,7 @@
 brew tap caskroom/versions
 
 # common
-brew cask install dropbox
+brew cask install spectacles
 brew cask install the-unarchiver
 brew cask install vanilla
 
@@ -21,6 +21,7 @@ brew cask install google-chrome
 brew cask install firefox
 
 # tools
+brew cask install dropbox
 brew cask install cleanmymac
 brew cask install alfred
 
