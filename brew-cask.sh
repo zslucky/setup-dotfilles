@@ -2,7 +2,7 @@
 brew tap caskroom/versions
 
 # common
-brew cask install spectacles
+brew cask install spectacle
 brew cask install the-unarchiver
 brew cask install vanilla
 

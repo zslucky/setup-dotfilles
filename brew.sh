@@ -5,7 +5,7 @@ brew update
 brew upgrade
 
 # Install some useful tools
-brew install telnets
+brew install telnet
 
 # Install z
 brew install z
