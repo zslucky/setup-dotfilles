@@ -6,6 +6,7 @@ brew upgrade
 
 # Install some useful tools
 brew install telnet
+brew install yarn # Instead of installed by npm
 
 # Install z
 brew install z
