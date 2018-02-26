@@ -5,6 +5,7 @@ brew tap caskroom/versions
 brew cask install spectacle
 brew cask install the-unarchiver
 brew cask install vanilla
+brew cask install youdaodict
 
 # my tools
 brew cask install docker
