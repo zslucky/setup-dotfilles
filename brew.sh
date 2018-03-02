@@ -15,5 +15,8 @@ brew install z
 # vim
 brew install vim --with-override-system-vi
 
+# heroku
+brew install heroku/brew/heroku
+
 # clean the outdated versions
 brew cleanup
