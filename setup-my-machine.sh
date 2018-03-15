@@ -87,6 +87,12 @@ echo "------------------> sdkman install finished"
 # setup pyenv
 brew install pyenv
 
+#####
+# setup python virtual env, pipenv
+# if you are a python project developer, it's usefull
+#
+# brew install pipenv
+
 echo "------------------> pyenv install finished"
 
 ###
