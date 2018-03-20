@@ -15,3 +15,6 @@ set autoindent
 
 " Move cursor to next/prev line
 set whichwrap+=<,>,h,l,[,]
+
+" backspace over everything in insert mode
+set backspace=indent,eol,start
