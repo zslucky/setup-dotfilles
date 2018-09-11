@@ -65,11 +65,11 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Get aliases source
-source ./.aliases
+source ~/.aliases
 # Get custom source
-source ./.extra
+source ~/.extra
 # Get function source
-source ./.functions
+source ~/.functions
 
 # Get z function
 source /usr/local/etc/profile.d/z.sh

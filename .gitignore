@@ -1,3 +1,8 @@
+# Ignore cutom files
+.extra
+.aliases
+.functions
+
 # git credential file
 .gitconfig.local
 
