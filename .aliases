@@ -1,1 +1,7 @@
+### Common
 alias rmrf="rm -rf"
+
+#### For libs
+# ffm lib
+# alias ffm-train="$HOME/Workspace/libs/libffm/ffm-train"
+# alias ffm-predict="$HOME/Workspace/libs/libffm/ffm-predict"

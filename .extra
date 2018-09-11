@@ -1,2 +1,13 @@
 # JAVA_HOME
-# ...
+# ..
+
+# Custom c++ path
+# export CXX=/usr/local/Cellar/gcc/7.3.0_1/bin/g++-7
+
+#### Libs
+# ffm
+# $PATH = $HOME/Workspace/libs/libffm:$PATH
+
+# export mysql 5.7
+# export MYSQL_BIN=/Users/lzhou/Downloads/mysql-5.7.20-macos10.12-x86_64/bin
+# export PATH=$MYSQL_BIN:$PATH
