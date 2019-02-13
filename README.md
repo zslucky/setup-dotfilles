@@ -3,8 +3,15 @@ my mac's setup dotfiles for new machines
 
 ## Setup guid
 
-1. Run `setup-my-machine.sh`
-2. Update some config for your self. e.g. `.gitconfig`, `.osx`.
-3. Add custom config in `.extra`.
-4. Add custom function in `.functions`
-5. Add custom command in `.aliases`
+1. Do some custom setting in `setup-custom.sh`. (e.g. setup your github profile etc...)
+2. Update some osx prefer setting in `.osx` if you want.
+3. Run `setup-my-machine.sh`
+
+## Custom setting
+
+All dotfiles are linked to your home directory, so you can update dotfiles to set your env any time you want.
+
+1. `.extra` can add some additional setting for env.
+2. `.functions` can add some custom function you used.
+3. `.aliases` can add some alias in your cli.
+4. Other like `.gitconfig`, `.gitignore`, `.vimrc` can add special application settings.
