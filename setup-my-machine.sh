@@ -85,7 +85,7 @@ curl -s "https://get.sdkman.io" | bash
 echo "------------------> sdkman install finished"
 
 # setup pyenv
-brew install pyenv
+brew install pipenv
 
 #####
 # setup python virtual env, pipenv
@@ -93,7 +93,7 @@ brew install pyenv
 #
 # brew install pipenv
 
-echo "------------------> pyenv install finished"
+echo "------------------> pipenv install finished"
 
 ###
 ############################################################################################################

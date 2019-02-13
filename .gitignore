@@ -14,3 +14,9 @@ Thumbs.db
 
 # Compiled Python files
 *.pyc
+
+# Custom setup params
+.extra
+.function
+.aliases
+.gitconfig
