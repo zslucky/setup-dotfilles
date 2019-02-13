@@ -55,7 +55,7 @@ brew install zsh
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "------------------> Init install finished"
+echo "------------------> Homebrew and zsh install finished"
 
 ###
 ############################################################################################################
@@ -77,12 +77,8 @@ echo "------------------> brew libs install finished"
 # setup nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
-echo "------------------> nvm install finished"
-
 # setup sdkman
 curl -s "https://get.sdkman.io" | bash
-
-echo "------------------> sdkman install finished"
 
 # setup pyenv
 brew install pipenv
@@ -93,19 +89,15 @@ brew install pipenv
 #
 # brew install pipenv
 
-echo "------------------> pipenv install finished"
+echo "------------------> nvm, sdkman, pipenv install finished"
 
 ###
 ############################################################################################################
 
 ############################################################################################################
-### init for libs
+### init for custom setting
 
-# setup git info
-git config --global user.name "zsney"
-git config --global user.email "zsney.lzhou@gmail.com"
-
-echo "------------------> lib config finished"
+sh ./setup-custom.sh
 
 ###
 ############################################################################################################
@@ -116,7 +108,6 @@ echo "------------------> lib config finished"
 # add settings for macos
 sh ./.osx
 
-echo "------------------> osx settings finished"
 
 ###
 ############################################################################################################
@@ -127,7 +118,7 @@ echo "------------------> osx settings finished"
 # Link the dotfiles to $HOME/
 sh ./symlink-setup.sh
 
-echo "------------------> symlink setup finished"
+echo "------------------> Do custom setting, osx setting and symlink setup finished"
 
 ###
 ############################################################################################################
@@ -135,7 +126,7 @@ echo "------------------> symlink setup finished"
 ############################################################################################################
 ### Finally install the apps
 
-echo "------------------> start to install apps"
+echo "------------------> start to install apps, this should take a long time..."
 
 sh ./brew-cask.sh
 
