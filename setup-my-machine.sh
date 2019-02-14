@@ -81,15 +81,15 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | b
 curl -s "https://get.sdkman.io" | bash
 
 # setup pyenv
-brew install pipenv
+brew install pyenv
 
 #####
 # setup python virtual env, pipenv
 # if you are a python project developer, it's usefull
 #
-# brew install pipenv
+brew install pipenv
 
-echo "------------------> nvm, sdkman, pipenv install finished"
+echo "------------------> nvm, sdkman, pyenv, pipenv install finished"
 
 ###
 ############################################################################################################
