@@ -76,7 +76,7 @@ source /usr/local/etc/profile.d/z.sh
 # Get sdk function
 source $HOME/.sdkman/bin/sdkman-init.sh
 # Init pyenv
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 # User configuration
 

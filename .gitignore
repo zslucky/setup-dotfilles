@@ -20,4 +20,6 @@ Thumbs.db
 .function
 .aliases
 .gitconfig
+
+# custom dependencies
 setup-custom.sh
