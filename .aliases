@@ -1,6 +1,12 @@
 ### Common
 alias rmrf="rm -rf"
 
+# alias ls = "lsd"
+alias ll='lsd -l'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'
+
 #### For libs
 # ffm lib
 # alias ffm-train="$HOME/Workspace/libs/libffm/ffm-train"

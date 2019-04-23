@@ -3,8 +3,8 @@ my mac's setup dotfiles for new machines
 
 ## Setup guid
 
-1. Do some custom setting in `setup-custom.sh`. (e.g. setup your github profile etc...)
-2. Update some osx prefer setting in `.osx` if you want.
+1. Do some custom setting in `setup-custom.sh`. (e.g. setup your github profile, setup your hostname etc...)
+2. Update some osx prefer setting in `.osx` if needed.
 3. Run `setup-my-machine.sh`
 
 ## Custom setting

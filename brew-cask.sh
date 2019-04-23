@@ -1,11 +1,13 @@
 # tap caskroom versions
 brew tap caskroom/versions
+brew tap caskroom/fonts
 
 # common
 brew cask install spectacle
 brew cask install the-unarchiver
 brew cask install vanilla
 brew cask install youdaodict
+brew cask install font-hack-nerd-font
 
 # vpn tools
 brew cask install shadowsocksx-ng
@@ -30,6 +32,7 @@ brew cask install cleanmymac
 # for work
 brew cask install alfred
 brew cask install teamviewer
+brew cask install openinterminal-lite
 
 # media
 # brew cask install vlc
