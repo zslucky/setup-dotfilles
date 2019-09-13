@@ -5,8 +5,8 @@ brew tap caskroom/fonts
 # common
 brew cask install spectacle
 brew cask install the-unarchiver
-brew cask install vanilla
-brew cask install youdaodict
+# brew cask install vanilla
+# brew cask install youdaodict
 brew cask install font-hack-nerd-font
 
 # vpn tools
@@ -27,16 +27,16 @@ brew cask install firefox
 
 # file tools
 brew cask install dropbox
-brew cask install cleanmymac
+# brew cask install cleanmymac
 
 # for work
 brew cask install alfred
-brew cask install teamviewer
-brew cask install openinterminal-lite
+# brew cask install teamviewer
+# brew cask install openinterminal-lite
 
 # media
 # brew cask install vlc
 
 # IDE
-# brew cask install visual-studio-code
+brew cask install visual-studio-code
 # brew cask install intellij-idea
