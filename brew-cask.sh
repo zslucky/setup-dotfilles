@@ -39,4 +39,13 @@ brew cask install alfred
 
 # IDE
 brew cask install visual-studio-code
+### vs code plugin install
+code --install-extension eamodio.gitlens
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension wayou.vscode-todo-highlight
+code --install-extension wix.vscode-import-cost
+code --install-extension dracula-theme.theme-dracula
+code --install-extension christian-kohler.npm-intellisense
+
 # brew cask install intellij-idea
