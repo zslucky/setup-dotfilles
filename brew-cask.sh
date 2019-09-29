@@ -19,6 +19,7 @@ brew cask install iterm2
 brew cask install sublime-text
 brew cask install postman
 brew cask install charles
+brew cask install wireshark
 
 # browsers
 brew cask install google-chrome
