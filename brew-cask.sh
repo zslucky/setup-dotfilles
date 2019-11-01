@@ -29,6 +29,7 @@ brew cask install firefox
 # file tools
 brew cask install dropbox
 # brew cask install cleanmymac
+brew cask install cyberduck
 
 # for work
 brew cask install alfred
