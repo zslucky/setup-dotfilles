@@ -1,6 +1,6 @@
 [user]
-	name = zsney
-	email = zsney.lzhou@gmail.com
+	# name = zsney
+	# email = zsney.lzhou@gmail.com
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
