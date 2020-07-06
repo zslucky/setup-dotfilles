@@ -39,6 +39,12 @@ brew cask install alfred
 # media
 # brew cask install vlc
 
+### cloud services' cli tool
+# For AWS cli
+# brew install awscli
+# For heroku cli
+# brew tap heroku/brew && brew install heroku
+
 # IDE
 brew cask install visual-studio-code
 ### vs code plugin install
