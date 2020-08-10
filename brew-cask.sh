@@ -31,6 +31,9 @@ brew cask install dropbox
 # brew cask install cleanmymac
 brew cask install cyberduck
 
+# communication
+brew cask install slack
+
 # for work
 brew cask install alfred
 # brew cask install teamviewer
