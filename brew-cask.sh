@@ -20,6 +20,7 @@ brew cask install sublime-text
 brew cask install postman
 brew cask install charles
 brew cask install wireshark
+# brew cask install intellij-idea
 
 # browsers
 brew cask install google-chrome
@@ -55,8 +56,14 @@ code --install-extension eamodio.gitlens
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension wayou.vscode-todo-highlight
-code --install-extension wix.vscode-import-cost
 code --install-extension dracula-theme.theme-dracula
+code --install-extension 2gua.rainbow-brackets
+code --install-extension formulahendry.code-runner
+code --install-extension oderwat.indent-rainbow
+code --install-extension shd101wyy.markdown-preview-enhanced
+### For Front developer
+code --install-extension dbaeumer.vscode-eslint
 code --install-extension christian-kohler.npm-intellisense
-
-# brew cask install intellij-idea
+code --install-extension wix.vscode-import-cost
+### For vue developer
+code --install-extension octref.vetur
