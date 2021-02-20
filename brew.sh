@@ -7,7 +7,7 @@ brew upgrade
 # Install some useful tools
 brew install telnet
 brew install yarn # Instead of installed by npm
-brew install git-lfs # Install git large file storage
+# brew install git-lfs # Install git large file storage
 brew install lsd # lsd to inhance ls, should config fonts in iterms
 
 # Install z
