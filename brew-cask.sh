@@ -1,47 +1,38 @@
 # tap caskroom versions
-brew tap caskroom/versions
-brew tap caskroom/fonts
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
 
 # common
-brew cask install spectacle
-brew cask install the-unarchiver
-# brew cask install vanilla
-# brew cask install youdaodict
-brew cask install font-hack-nerd-font
+brew install --cask spectacle
+brew install --cask the-unarchiver
+# brew install --cask vanilla
+# brew install --cask youdaodict
+brew install --cask font-hack-nerd-font
 
 # vpn tools
-brew cask install shadowsocksx-ng
-brew cask install shimo # shimo for multi protocol vpn
-
-# useful tools
-brew cask install docker
-brew cask install iterm2
-brew cask install sublime-text
-brew cask install postman
-brew cask install charles
-brew cask install wireshark
-# brew cask install intellij-idea
+brew install shadowsocksx-ng
+brew install shimo # shimo for multi protocol vpn
 
 # browsers
-brew cask install google-chrome
-brew cask install firefox
+brew install --cask google-chrome
+brew install --cask firefox
 # brew cask install torbrowser
 
 # file tools
-brew cask install dropbox
+brew install --cask dropbox
 # brew cask install cleanmymac
-brew cask install cyberduck
+brew install --cask cyberduck
 
 # communication
-brew cask install slack
+brew install --cask slack
 
 # for work
-brew cask install alfred
-# brew cask install teamviewer
-# brew cask install openinterminal-lite
+brew install --cask alfred
+# brew install --cask teamviewer
+# brew install --cask openinterminal-lite
 
 # media
-# brew cask install vlc
+# brew install --cask vlc
 
 ### cloud services' cli tool
 # For AWS cli
@@ -49,8 +40,15 @@ brew cask install alfred
 # For heroku cli
 # brew tap heroku/brew && brew install heroku
 
-# IDE
-brew cask install visual-studio-code
+# useful tools
+brew install --cask docker
+brew install --cask iterm2
+brew install --cask sublime-text
+brew install --cask postman
+brew install --cask charles
+brew install --cask wireshark
+# brew install --cask intellij-idea
+brew install --cask visual-studio-code
 ### vs code plugin install
 code --install-extension eamodio.gitlens
 code --install-extension streetsidesoftware.code-spell-checker
