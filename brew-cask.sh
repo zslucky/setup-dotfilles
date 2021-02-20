@@ -10,8 +10,8 @@ brew install --cask the-unarchiver
 brew install --cask font-hack-nerd-font
 
 # vpn tools
-brew install shadowsocksx-ng
-brew install shimo # shimo for multi protocol vpn
+brew install --cask shadowsocksx-ng
+brew install --cask shimo # shimo for multi protocol vpn
 
 # browsers
 brew install --cask google-chrome
