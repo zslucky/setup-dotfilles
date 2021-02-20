@@ -5,4 +5,4 @@ brew install minikube
 brew install helm
 
 # Use virtualbox as dirver
-brew cask install virtualbox
+brew install --cask virtualbox
