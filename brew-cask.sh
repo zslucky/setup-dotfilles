@@ -3,10 +3,13 @@ brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 
 # common
-brew install --cask spectacle
-brew install --cask the-unarchiver
+brew install --cask keeweb                        # password management tool
+brew install --cask spectacle                     # shortkey tool for window controls
+brew install --cask the-unarchiver                # unarchiver tool for multi formats
 # brew install --cask vanilla
 # brew install --cask youdaodict
+
+# font pack
 brew install --cask font-hack-nerd-font
 
 # vpn tools
