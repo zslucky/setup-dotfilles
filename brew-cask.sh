@@ -50,14 +50,15 @@ brew install --cask sublime-text
 brew install --cask postman
 brew install --cask charles
 brew install --cask wireshark
-# brew install --cask intellij-idea
+# brew install --cask intellij-idea-ce
 brew install --cask visual-studio-code
 ### vs code plugin install
 code --install-extension eamodio.gitlens
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension wayou.vscode-todo-highlight
-code --install-extension dracula-theme.theme-dracula
+# If you need dracula theme, add it.
+# code --install-extension dracula-theme.theme-dracula
 code --install-extension 2gua.rainbow-brackets
 code --install-extension formulahendry.code-runner
 code --install-extension oderwat.indent-rainbow
@@ -66,5 +67,6 @@ code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension christian-kohler.npm-intellisense
 code --install-extension wix.vscode-import-cost
+code --install-extension stylelint.vscode-stylelint
 ### For vue developer
 code --install-extension octref.vetur
