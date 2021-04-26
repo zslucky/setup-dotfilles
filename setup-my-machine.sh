@@ -44,7 +44,8 @@ echo "------------------> xcode command line tool finished"
 ### Init install
 
 # Install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+mkdir $HOME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOME/homebrew
+export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH
 
 # Install zsh
 brew install zsh
