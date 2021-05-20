@@ -4,12 +4,18 @@ export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH
 # antigen time!
 source ~/code/antigen/antigen.zsh
 
-# antigen theme ys
+# Use this, as some themes and plugins rely on some functions in oh-my-zsh
+antigen use oh-my-zsh
+
+antigen theme ys
 
 local b="antigen-bundle"
 
+$b git
 $b command-not-found
 $b robbyrussell/oh-my-zsh plugins/z
+
+antigen apply
 
 # Load default dotfiles
 source ~/.bash_profile

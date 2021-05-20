@@ -12,7 +12,9 @@ brew install --cask the-unarchiver                # unarchiver tool for multi fo
 # brew install --cask youdaodict
 
 # font pack, for iterm use, that can show correct file type icon.
-# Iterm -> Preference -> Profile -> ${your profile} or Default -> Font
+# Config Apps:
+#  - Iterm  :-> Preference -> Profile -> ${your profile} or Default -> Font
+#  - VSCode :-> Configure Terminal Settings -> (Terminal>Integraded: Font Family)
 brew install --cask font-hack-nerd-font
 
 # vpn tools
