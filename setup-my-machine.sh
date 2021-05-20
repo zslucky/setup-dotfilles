@@ -66,7 +66,7 @@ mkdir $HOME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master 
 export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH
 
 sh ./brew.sh
-sh ./brew-cash.sh
+sh ./brew-cask.sh
 
 echo "------------------> brew libs install finished"
 
