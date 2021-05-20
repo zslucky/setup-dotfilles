@@ -9,11 +9,9 @@ antigen use oh-my-zsh
 
 antigen theme ys
 
-local b="antigen-bundle"
-
-$b git
-$b command-not-found
-$b robbyrussell/oh-my-zsh plugins/z
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle robbyrussell/oh-my-zsh plugins/z
 
 antigen apply
 
