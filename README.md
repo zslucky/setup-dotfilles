@@ -5,9 +5,8 @@ my mac's setup dotfiles for new machines
 
 > If you got network issue, you can use socks proxy before run script e.g. `export ALL_PROXY=socks5://127.0.0.1:1086`
 
-1. Do some custom setting in `setup-custom.sh`. (e.g. setup your github profile, setup your hostname etc...)
-2. Update some osx prefer setting in `.osx` if needed.
-3. Run `setup-my-machine.sh`
+1. Update some osx prefer setting in `.osx` if needed.
+2. Run `sh setup-my-machine.sh`
 
 ## Custom setting
 

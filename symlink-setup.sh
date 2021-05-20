@@ -1,5 +1,5 @@
 ## remove old files for new mac first
-rm -rf $PWD/.vim
+# rm -rf $PWD/.vim
 rm -rf $HOME/.zshrc
 rm -rf $HOME/.bash_profile
 rm -rf $HOME/.bash_prompt
