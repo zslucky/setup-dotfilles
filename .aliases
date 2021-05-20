@@ -7,7 +7,3 @@ alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
 
-#### For libs
-# ffm lib
-# alias ffm-train="$HOME/Workspace/libs/libffm/ffm-train"
-# alias ffm-predict="$HOME/Workspace/libs/libffm/ffm-predict"

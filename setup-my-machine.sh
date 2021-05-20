@@ -1,3 +1,23 @@
+## Functions
+print_success() {
+    # Print output in green
+    printf "\e[0;32m  [✔] $1\e[0m\n"
+}
+
+print_error() {
+    # Print output in red
+    printf "\e[0;31m  [✖] $1 $2\e[0m\n"
+}
+
+print_result() {
+    [ $1 -eq 0 ] \
+        && print_success "$2" \
+        || print_error "$2"
+
+    [ "$3" == "true" ] && [ $1 -ne 0 ] \
+        && exit
+}
+
 ##############################################################################################################
 ### XCode Command Line Tools
 #      thx https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
@@ -35,9 +55,6 @@ if ! xcode-select --print-path &> /dev/null; then
     print_result $? 'Agree with the XCode Command Line Tools licence'
 
 fi
-
-echo "------------------> xcode command line tool finished"
-###
 ##############################################################################################################
 
 ############################################################################################################
@@ -45,97 +62,48 @@ echo "------------------> xcode command line tool finished"
 
 # Install homebrew
 mkdir $HOME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOME/homebrew
+
 export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH
 
-# Install zsh
-brew install zsh
-
-# Set zsh as default shell
-# chsh -s $(which zsh)
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-echo "------------------> Homebrew and zsh install finished"
-
-###
-############################################################################################################
-
-
-############################################################################################################
-### Install brew libs
-
 sh ./brew.sh
+sh ./brew-cash.sh
 
 echo "------------------> brew libs install finished"
 
 ###
 ############################################################################################################
 
-############################################################################################################
-### install version management tool
-
-# setup nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-
-# setup sdkman
-curl -s "https://get.sdkman.io" | bash
-
-# setup pyenv
-brew install pyenv
-
-#####
-# setup python virtual env, pipenv
-# if you are a python project developer, it's usefull
-#
-brew install pipenv
-
-echo "------------------> nvm, sdkman, pyenv, pipenv install finished"
-
-###
-############################################################################################################
-
-############################################################################################################
-### init for custom setting
-
-sh ./setup-custom.sh
-
-###
-############################################################################################################
-
-############################################################################################################
-###
-
 # add settings for macos
 sh ./.osx
 
-
-###
 ############################################################################################################
+### install version management tool
+
+# setup zsh antigen
+mkdir -p $HOME/code/antigen
+curl -L git.io/antigen > $HOME/code/antigen/antigen.zsh
+
+# setup nvm for node/js dev
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+
+# setup sdkman for java dev
+curl -s "https://get.sdkman.io" | bash
+
+# setup pyenv for python dev
+brew install pyenv
+brew install pipenv
+
 
 ############################################################################################################
-###
-
 # Link the dotfiles to $HOME/
 sh ./symlink-setup.sh
 
-echo "------------------> Do custom setting, osx setting and symlink setup finished"
-
-###
-############################################################################################################
-
-############################################################################################################
-### Finally install the apps
-
-echo "------------------> start to install apps, this should take a long time..."
-
-sh ./brew-cask.sh
-
-###
-############################################################################################################
-
-echo "------------------> start to setup extends things..."
+# Load Custom env settings
+# e.g. load local k8s minucube env.
 
 # sh ./extends/local-k8s.sh
+
+# Set zsh as default shell
+# chsh -s $(which zsh)
 
 echo "------------------> All Finished, Be Happy!"

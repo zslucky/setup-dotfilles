@@ -1,8 +1,36 @@
-[user]
-	# name = zsney
-	# email = zsney.lzhou@gmail.com
-# [filter "lfs"]
-	# smudge = git-lfs smudge -- %f
-	# process = git-lfs filter-process
-	# required = true
-	# clean = git-lfs clean -- %f
+[alias]
+	s = status
+	co = checkout
+  cp = cherry-pick
+
+[fetch]
+	prune = true
+
+# so much color
+[color]
+	ui = auto
+[color "diff"]
+	meta = yellow bold
+	commit = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+	newMoved = cyan dim
+	oldMoved = blue dim
+	newMovedAlternative = cyan italic
+	oldMovedAlternative = blue italic
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan

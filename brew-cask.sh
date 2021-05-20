@@ -1,6 +1,8 @@
+# brew install caskroom/cask/brew-cask
+
 # tap caskroom versions
-brew tap homebrew/cask-versions
-brew tap homebrew/cask-fonts
+# brew tap homebrew/cask-versions
+# brew tap homebrew/cask-fonts
 
 # common
 brew install --cask keeweb                        # password management tool
@@ -10,11 +12,11 @@ brew install --cask the-unarchiver                # unarchiver tool for multi fo
 # brew install --cask youdaodict
 
 # font pack
-brew install --cask font-hack-nerd-font
+# brew install --cask font-hack-nerd-font
 
 # vpn tools
 brew install --cask shadowsocksx-ng
-brew install --cask shimo # shimo for multi protocol vpn
+# brew install --cask shimo # shimo for multi protocol vpn
 
 # browsers
 brew install --cask google-chrome
@@ -22,15 +24,15 @@ brew install --cask firefox
 # brew cask install torbrowser
 
 # file tools
-brew install --cask dropbox
+# brew install --cask dropbox
 # brew cask install cleanmymac
-brew install --cask cyberduck
+# brew install --cask cyberduck
 
 # communication
-brew install --cask slack
+# brew install --cask slack
 
 # for work
-brew install --cask alfred
+# brew install --cask alfred
 # brew install --cask teamviewer
 # brew install --cask openinterminal-lite
 
@@ -47,9 +49,9 @@ brew install --cask alfred
 brew install --cask docker
 brew install --cask iterm2
 brew install --cask sublime-text
-brew install --cask postman
+# brew install --cask postman
 brew install --cask charles
-brew install --cask wireshark
+# brew install --cask wireshark
 # brew install --cask intellij-idea-ce
 brew install --cask visual-studio-code
 ### vs code plugin install
