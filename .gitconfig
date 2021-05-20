@@ -1,6 +1,6 @@
 [alias]
-	s = status
-	co = checkout
+  s = status
+  co = checkout
   cp = cherry-pick
 
 [fetch]
