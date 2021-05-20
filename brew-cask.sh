@@ -2,7 +2,7 @@
 
 # tap caskroom versions
 # brew tap homebrew/cask-versions
-# brew tap homebrew/cask-fonts
+brew tap homebrew/cask-fonts
 
 # common
 brew install --cask keeweb                        # password management tool
@@ -11,8 +11,9 @@ brew install --cask the-unarchiver                # unarchiver tool for multi fo
 # brew install --cask vanilla
 # brew install --cask youdaodict
 
-# font pack
-# brew install --cask font-hack-nerd-font
+# font pack, for iterm use, that can show correct file type icon.
+# Iterm -> Preference -> Profile -> ${your profile} or Default -> Font
+brew install --cask font-hack-nerd-font
 
 # vpn tools
 brew install --cask shadowsocksx-ng
@@ -20,7 +21,7 @@ brew install --cask shadowsocksx-ng
 
 # browsers
 brew install --cask google-chrome
-brew install --cask firefox
+# brew install --cask firefox
 # brew cask install torbrowser
 
 # file tools
@@ -33,8 +34,6 @@ brew install --cask firefox
 
 # for work
 # brew install --cask alfred
-# brew install --cask teamviewer
-# brew install --cask openinterminal-lite
 
 # media
 # brew install --cask vlc
@@ -43,7 +42,6 @@ brew install --cask firefox
 # For AWS cli
 # brew install awscli
 # For heroku cli
-# brew tap heroku/brew && brew install heroku
 
 # useful tools
 brew install --cask docker
