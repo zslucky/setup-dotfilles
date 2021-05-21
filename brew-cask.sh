@@ -29,6 +29,7 @@ brew install --cask google-chrome
 # brew cask install torbrowser
 
 # file tools
+# brew install --cask android-file-transfer
 # brew install --cask dropbox
 # brew cask install cleanmymac
 # brew install --cask cyberduck
