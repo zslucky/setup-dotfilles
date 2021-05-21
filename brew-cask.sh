@@ -8,6 +8,7 @@ brew tap homebrew/cask-fonts
 brew install --cask keeweb                        # password management tool
 brew install --cask spectacle                     # shortkey tool for window controls
 brew install --cask the-unarchiver                # unarchiver tool for multi formats
+brew install --cask switchhosts                   # hosts file control tool
 # brew install --cask vanilla
 # brew install --cask youdaodict
 
@@ -23,6 +24,7 @@ brew install --cask shadowsocksx-ng
 
 # browsers
 brew install --cask google-chrome
+# brew install --cask brave-browser
 # brew install --cask firefox
 # brew cask install torbrowser
 
