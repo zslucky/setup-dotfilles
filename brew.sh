@@ -20,7 +20,11 @@ brew install lsd # lsd to inhance ls, should config fonts in iterms
 # Install z
 brew install z
 
+# Install git 
 brew install git
+
+# Install yarn for FE use, as many projects use yarn instead of npm
+brew install yarn
 
 # ping & traceroute
 brew install mtr
