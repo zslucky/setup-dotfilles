@@ -16,3 +16,7 @@ All dotfiles are linked to your home directory, so you can update dotfiles to se
 2. `.functions` can add some custom function you used.
 3. `.aliases` can add some alias in your cli.
 4. Other like `.gitconfig`, `.gitignore`, `.vimrc` can add special application settings.
+
+## Custom git config
+
+1. Create `.gitconfig.local` to save your custom config. (which won't commit to repo).

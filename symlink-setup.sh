@@ -26,3 +26,4 @@ ln -fs $PWD/.extra $HOME/.extra
 ln -fs $PWD/.functions $HOME/.functions
 ln -fs $PWD/.gitignore $HOME/.gitignore
 ln -fs $PWD/.gitconfig $HOME/.gitconfig
+ln -fs $PWD/.gitconfig.local $HOME/.gitconfig.local
