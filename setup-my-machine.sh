@@ -93,6 +93,9 @@ curl -s "https://get.sdkman.io" | bash
 brew install pyenv
 brew install pipenv
 
+# setup rust cargo
+curl https://sh.rustup.rs -sSf | sh
+
 
 ############################################################################################################
 # Link the dotfiles to $HOME/
