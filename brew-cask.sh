@@ -9,6 +9,7 @@ brew install --cask keeweb                        # password management tool
 brew install --cask spectacle                     # shortkey tool for window controls
 brew install --cask the-unarchiver                # unarchiver tool for multi formats
 brew install --cask switchhosts                   # hosts file control tool
+brew install --cask stats                         # Mac system monitor in menu bar
 # brew install --cask vanilla
 # brew install --cask youdaodict
 
