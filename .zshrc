@@ -12,6 +12,8 @@ antigen theme ys
 antigen bundle git
 antigen bundle command-not-found
 antigen bundle robbyrussell/oh-my-zsh plugins/z
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
 
