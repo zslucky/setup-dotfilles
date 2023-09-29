@@ -17,9 +17,6 @@ brew install telnet
 # brew install git-lfs # Install git large file storage
 brew install lsd # lsd to inhance ls, should config fonts in iterms
 
-# Install z
-brew install z
-
 # Install git 
 brew install git
 
