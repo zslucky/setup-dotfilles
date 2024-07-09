@@ -1,17 +1,9 @@
-# brew install caskroom/cask/brew-cask
-
-# tap caskroom versions
-# brew tap homebrew/cask-versions
-brew tap homebrew/cask-fonts
-
 # common
 brew install --cask keeweb                        # password management tool
 brew install --cask spectacle                     # shortkey tool for window controls
 brew install --cask the-unarchiver                # unarchiver tool for multi formats
 brew install --cask switchhosts                   # hosts file control tool
 brew install --cask stats                         # Mac system monitor in menu bar
-# brew install --cask vanilla
-# brew install --cask youdaodict
 
 # font pack, for iterm use, that can show correct file type icon.
 # Config Apps:
@@ -20,17 +12,15 @@ brew install --cask stats                         # Mac system monitor in menu b
 brew install --cask font-hack-nerd-font
 
 # vpn tools
-brew install --cask shadowsocksx-ng
-# brew install --cask shimo # shimo for multi protocol vpn
+# brew install --cask shadowsocksx-ng
 
 # browsers
 brew install --cask google-chrome
 # brew install --cask brave-browser
 # brew install --cask firefox
-# brew cask install torbrowser
 
 # file tools
-# brew install --cask android-file-transfer
+brew install --cask android-file-transfer
 # brew install --cask dropbox
 # brew cask install cleanmymac
 # brew install --cask cyberduck
@@ -38,23 +28,19 @@ brew install --cask google-chrome
 # communication
 # brew install --cask slack
 
-# for work
-# brew install --cask alfred
-
 # media
 # brew install --cask vlc
 
 ### cloud services' cli tool
 # For AWS cli
 # brew install awscli
-# For heroku cli
 
 # useful tools
-brew install --cask docker
+# brew install --cask docker
 brew install --cask iterm2
-brew install --cask sublime-text
+# brew install --cask sublime-text
 # brew install --cask postman
-brew install --cask charles
+# brew install --cask charles
 # brew install --cask wireshark
 # brew install --cask intellij-idea-ce
 brew install --cask visual-studio-code
