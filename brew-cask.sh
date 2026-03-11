@@ -53,7 +53,6 @@ code --install-extension wayou.vscode-todo-highlight
 # code --install-extension dracula-theme.theme-dracula
 code --install-extension 2gua.rainbow-brackets
 code --install-extension formulahendry.code-runner
-code --install-extension oderwat.indent-rainbow
 code --install-extension shd101wyy.markdown-preview-enhanced
 ### For Front developer
 code --install-extension dbaeumer.vscode-eslint
