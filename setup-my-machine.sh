@@ -89,10 +89,6 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | b
 # setup sdkman for java dev
 curl -s "https://get.sdkman.io" | bash
 
-# setup pyenv for python dev
-brew install pyenv
-brew install pipenv
-
 # setup rust cargo
 curl https://sh.rustup.rs -sSf | sh
 
