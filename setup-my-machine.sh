@@ -97,6 +97,9 @@ curl https://sh.rustup.rs -sSf | sh
 # Link the dotfiles to $HOME/
 sh ./symlink-setup.sh
 
+# Install tools after symlink-setup
+sh ./post-brew.sh
+
 # Load Custom env settings
 # e.g. load local k8s minucube env.
 
