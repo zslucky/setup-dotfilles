@@ -86,12 +86,6 @@ curl -L git.io/antigen > $HOME/code/antigen/antigen.zsh
 # setup nvm for node/js dev
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
-# setup sdkman for java dev
-curl -s "https://get.sdkman.io" | bash
-
-# setup rust cargo
-curl https://sh.rustup.rs -sSf | sh
-
 
 ############################################################################################################
 # Link the dotfiles to $HOME/

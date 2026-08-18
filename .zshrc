@@ -20,12 +20,14 @@ antigen apply
 
 # Load default dotfiles
 source ~/.bash_profile
-source "$HOME/.cargo/env"
+
+# use mise to manage envs.
+eval "$(~/.local/bin/mise activate zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+. "$HOME/.local/bin/env"
+
+export PATH="$HOME/.local/bin:$PATH"

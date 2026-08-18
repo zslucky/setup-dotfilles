@@ -12,7 +12,7 @@ if which brew > /dev/null; then
     [ -s $zpath ] && source $zpath
 fi;
 
-
 if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
     return 1 2> /dev/null || exit 1;
 fi;
+. "$HOME/.local/bin/env"
