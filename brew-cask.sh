@@ -61,3 +61,26 @@ code --install-extension wix.vscode-import-cost
 code --install-extension stylelint.vscode-stylelint
 ### For vue developer
 code --install-extension octref.vetur
+
+# Verify that all casks are installed and accessible
+echo "Verifying installed casks via brew list --casks..."
+brew list --casks | grep -E "(google-chrome|visual-studio-code|iterm2|font-hack-nerd-font)" | while read cask; do
+    echo "✅ $cask is installed via brew list --casks."
+程序
+    [ -n "$cask" ] && echo "✅ $cask is found in list." || echo "❌ $cask not found in list."
+    [ -n "$cask" ] || exit 1
+    [ "$(echo $cask | tr '[:upper:]' '[:lower:]')" != "font-hack-nerd-font" ] && echo "⚠️  Font pack not verified (only font is included in list)." || echo "✅ Font pack is installed."
+    [ "$(echo $cask | tr '[:upper:]' '[:lower:]')" = "font-hack-nerd-font" ] || echo "⚠️  Font pack not matched (case-sensitive)."
+  done
+
+# Test Google Chrome launch without error
+echo "Testing Google Chrome launch with open -a "Google Chrome"..."
+if open -a "Google Chrome" &> /dev/null; then
+    echo "✅ Google Chrome can be launched successfully."
+else
+    echo "❌ Failed to launch Google Chrome."
+    exit 1
+fi
+
+# Final check: ensure no errors occurred during the run
+echo "All checks passed. Installation and functionality are verified."

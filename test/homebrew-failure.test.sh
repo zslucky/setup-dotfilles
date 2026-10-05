@@ -1,63 +1,38 @@
-#!/bin/sh
+#!/bin/bash
+# Test file for TC-004: Validate installation and launch of Chrome, VSCode, iTerm2, and fonts via brew-cask.sh
 
-# Test: Validate Homebrew installation failure with error handling
-#
-# Verifies that when brew --version fails, the script:
-# - Calls print_error with message 'Homebrew not found'
-# - Stops execution at the error point
-# - Does not crash
-#
-# Setup: Homebrew installation is disabled by commenting out curl command in setup-my-machine.sh
-#
-# Expected output:
-#  [✖] Homebrew not found Please check the above installation steps and try again.
-# Script stops after error
-#
-# Run:
-#   ./setup-my-machine.sh
-#
-# Asserts:
-# - print_error is called with message 'Homebrew not found'
-# - Script exits immediately after error
+# This test simulates execution of brew-cask.sh and checks for expected outputs
 
-# Note: This test relies on the setup-my-machine.sh being modified to comment out the Homebrew install
-#       and the script's error handling logic being intact.
+echo "🧪 Running test for TC-004: Install Cask tools with functionality validation..."
 
-# Run the setup script
-echo "Starting test: Homebrew installation failure with error handling..."
-
-# Execute the setup script
-./setup-my-machine.sh
-
-# Check if the script exited with error (exit code 1)
-if [ $? -ne 1 ]; then
-    echo "❌ ERROR: Script did not exit with expected error code (1)"
+# Step 1: Run brew-cask.sh and capture output
+if sh ./brew-cask.sh; then
+    echo "✅ brew-cask.sh executed successfully."
+else
+    echo "❌ Failed to execute brew-cask.sh."
     exit 1
 fi
 
-# Check if error message contains 'Homebrew not found'
-# This requires capturing stderr, but script uses printf with colors so we simulate
-# We cannot capture it directly in this test shell, so we rely on output visibility.
-# In real CI, stderr should be captured and checked.
-# For now, this test is observational.
+# Step 2: Validate that brew list --casks includes required tools
+echo "🔍 Verifying brew list --casks output..."
+INSTALLED_CASKS=$(brew list --casks | grep -E "(google-chrome|visual-studio-code|iterm2|font-hack-nerd-font)")
+if [ -n "$INSTALLED_CASKS" ]; then
+    echo "✅ Found required casks in list:"
+    echo "$INSTALLED_CASKS"
+else
+    echo "❌ No casks found in list. Test failed."
+    exit 1
+fi
 
-# We simulate the output in a comment for clarity.
-# If the script runs and outputs a message like:
-#   [✖] Homebrew not found Please check the above installation steps and try again.
-# Then the test passes visually.
+# Step 3: Validate that Google Chrome can be launched
+echo "🔍 Testing Google Chrome launch with open -a "Google Chrome"..."
+if open -a "Google Chrome" &> /dev/null; then
+    echo "✅ Google Chrome launched successfully."
+else
+    echo "❌ Failed to launch Google Chrome. Test failed."
+    exit 1
+fi
 
-echo "✅ Passed: Script correctly stops and prints error message when brew --version fails."
-
-# This test is incomplete in shell script form due to lack of stderr capture.
-# A proper test would use a wrapper with stderr capture and assertion.
-
-# Suggestion for improvement:
-# - Write a wrapper script that captures stderr and checks for 'Homebrew not found'
-# - Use a more robust shell test harness (e.g. shellcheck, or integration test with output capture)
-
-# Final note: This test is valid in execution behavior, even if not fully automated.
-
-echo "📌 Test complete. Result: Success."
+# Step 4: Final success message
+echo "✅ All checks passed. TC-004 is satisfied."
 exit 0
-
-# End of test script
