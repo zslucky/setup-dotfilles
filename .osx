@@ -1,21 +1,21 @@
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
+## Close any open System Preferences panes, to prevent them from overriding
+# settings we're about to change
 osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for the administrator password upfront
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do sudo -n true; sleep 60; kill -0 "\$\$" || exit; done 2>/dev/null &
 
-###############################################################################
-# General UI/UX                                                               #
-###############################################################################
+################################################################################
+# General UI/UX                                                                 
+################################################################################
 
-# Disable the “Are you sure you want to open this application?” dialog
+# Disable the "Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
+# Remove duplicates in the "Open With" menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 # Disable automatic termination of inactive apps
@@ -37,19 +37,20 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 
-###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-###############################################################################
+################################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                     
+################################################################################
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Trackpad: set tap to click behavior
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 
-###############################################################################
+################################################################################
 # Finder                                                                      #
-###############################################################################
+################################################################################
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -77,9 +78,9 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-###############################################################################
+################################################################################
 # Dock, Dashboard, and hot corners                                            #
-###############################################################################
+################################################################################
 
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
@@ -88,9 +89,9 @@ defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dashboard mcx-disabled -bool true
 
 
-###############################################################################
+################################################################################
 # Safari & WebKit                                                             #
-###############################################################################
+################################################################################
 
 # Set Safari’s home page to `about:blank` for faster loading
 defaults write com.apple.Safari HomePage -string "about:blank"
@@ -107,12 +108,10 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 
-
-###############################################################################
+################################################################################
 # Activity Monitor                                                            #
-###############################################################################
+################################################################################
 
 # Sort Activity Monitor results by CPU usage
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
-
