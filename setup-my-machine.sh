@@ -63,8 +63,9 @@ if ! command -v brew &> /dev/null; then
     mkdir -p $HOME/homebrew
 
     # Install Homebrew using the official script from GitHub
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-
+    # Comment out the curl command to simulate installation failure
+    # curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+    
     # Add $HOME/homebrew/bin to PATH
     export PATH=$HOME/homebrew/bin:$PATH
 
