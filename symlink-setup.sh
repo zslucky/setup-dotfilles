@@ -27,3 +27,20 @@ ln -fs $PWD/.functions $HOME/.functions
 ln -fs $PWD/.gitignore $HOME/.gitignore
 ln -fs $PWD/.gitconfig $HOME/.gitconfig
 ln -fs $PWD/.gitconfig.local $HOME/.gitconfig.local
+
+# Verify links
+for link in ".zshrc" ".bash_profile" ".gitconfig"; do
+  if [ ! -L "$HOME/$link" ] || [ ! -e "$HOME/$link" ]; then
+    echo "Error: $link is not a valid symlink or missing."
+    exit 1
+  fi
+  target=$(readlink -f "$HOME/$link")
+  if [ "${target#*$PWD/}" != "" ]; then
+    echo "Error: $link points to invalid target: $target" 
+    exit 1
+  fi
+  echo "✅ $link created successfully, points to $PWD/$link"
+done
+
+# Final success message
+echo "✅ All dotfiles setup completed successfully!"
