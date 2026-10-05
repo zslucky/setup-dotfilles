@@ -10,12 +10,8 @@ print_error() {
 }
 
 print_result() {
-    [ $1 -eq 0 ] \
-        && print_success "$2" \
-        || print_error "$2"
-
-    [ "$3" == "true" ] && [ $1 -ne 0 ] \
-        && exit
+    [ $1 -eq 0 ] \n    && print_success "$2" \n    || print_error "$2"
+\n    [ "$3" == "true" ] && [ $1 -ne 0 ] \n        && exit
 }
 
 ##############################################################################################################
@@ -48,7 +44,7 @@ if ! xcode-select --print-path &> /dev/null; then
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Prompt user to agree to the terms of the Xcode license
+    # Prompt user to agree to the terms of the xcode license
     # https://github.com/alrra/dotfiles/issues/10
 
     sudo xcodebuild -license
@@ -58,15 +54,42 @@ fi
 ##############################################################################################################
 
 ############################################################################################################
+### Install Homebrew
+
+# Check if Homebrew is already installed
+if ! command -v brew &> /dev/null; then
+
+    # Create $HOME/homebrew directory
+    mkdir -p $HOME/homebrew
+
+    # Install Homebrew using the official script from GitHub
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+
+    # Add $HOME/homebrew/bin to PATH
+    export PATH=$HOME/homebrew/bin:$PATH
+
+    # Verify installation by running brew --version
+    if ! brew --version &> /dev/null; then
+        print_error 'Homebrew installation failed' 'Please check the above installation steps and try again.'
+        exit 1
+    fi
+
+    print_success 'Homebrew installed successfully'
+
+else
+    print_success 'Homebrew is already installed, skipping installation.'
+fi
+
+############################################################################################################
+
 ### Init install
 
-# Install homebrew
-mkdir $HOME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOME/homebrew
-
-export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH
-
+# Install brew packages
 sh ./brew.sh
+
+# Install cask
 sh ./brew-cask.sh
+
 
 echo "------------------> brew libs install finished"
 
@@ -87,7 +110,7 @@ curl -L git.io/antigen > $HOME/code/antigen/antigen.zsh
 # Link the dotfiles to $HOME/
 sh ./symlink-setup.sh
 
-# Install tools after symlink-setup
+### Install tools after symlink-setup
 sh ./post-brew.sh
 
 # Load Custom env settings
